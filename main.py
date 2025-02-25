@@ -4,7 +4,7 @@ import time
 from ppadb.client import Client as AdbClient
 
 APK_PATH = 'utilities/uptodown.apk'
-PACKAGE_NAME = 'com.uptodown' # dumpsys window displays | grep - E “mCurrentFocus” - get app package
+PACKAGE_NAME = 'com.uptodown'  # dumpsys window displays | grep - E “mCurrentFocus” - get app package
 DEVICE = 'R58R6133MRL'
 
 REMOTE_SCREENSHOT_PATH = '/sdcard/screenshot_{timestamp}.jpeg'  # Путь скриншота на устройстве
@@ -83,6 +83,6 @@ if __name__ == "__main__":
     app = AppManager()
     app.connect_to_app()
     # app.app_is_installed(PACKAGE_NAME)
-    # app.install_app(APK_PATH)
+    app.install_app(APK_PATH)
     # app.uninstall_app(PACKAGE_NAME)
     app.take_screenshot()
